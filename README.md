@@ -14,6 +14,67 @@ cd dockprom
 ADMIN_USER='admin' ADMIN_PASSWORD='admin' ADMIN_PASSWORD_HASH='$2a$14$1l.IozJx7xQRVmlkEQ32OeEEfP5mRxTpbDTCTcXRqn19gXD8YK1pO' docker-compose up -d
 ```
 
+# Grafana Prometheus Project Documentation
+
+**Table of Images for Grafana Prometheus Project**
+
+| Name | Image | Description |
+|---|---|---|
+| Prometheus | prom/prometheus:v2.48.0 | Metrics collection and analysis server |
+| Alertmanager | prom/alertmanager:v0.26.0 | Alerting service based on Prometheus |
+| NodeExporter | prom/node-exporter:v1.7.0 | Metrics collector for hosts |
+| CAdvisor | gcr.io/cadvisor/cadvisor:v0.47.2 | Metrics collector for containers |
+| Grafana | grafana/grafana:10.2.2 | Metrics analysis tool |
+| Pushgateway | prom/pushgateway:v1.6.2 | Metrics ingestion service |
+| Caddy | caddy:2.7.5 | Lightweight web server |
+
+**Explanations**
+
+* Prometheus is the main server in the project. It collects metrics from other services and stores them in a database.
+* Alertmanager is an alerting service based on Prometheus. It monitors metrics and sends alerts if thresholds are exceeded.
+* NodeExporter is a metrics collector for hosts. It gathers information about the operating system, processors, memory, storage, etc.
+* CAdvisor is a metrics collector for containers. It collects information about Docker containers, such as resource usage, logs, etc.
+* Grafana is a metrics analysis tool. It allows visualization of metrics collected by Prometheus.
+* Pushgateway is a metrics ingestion service. It enables applications to push metrics to Prometheus without needing to know its IP address.
+* Caddy is a lightweight web server. It can be used to serve Grafana.
+
+**Image Versions**
+
+The versions of the images listed in the table are as of December 8, 2023. It is recommended to check for the latest versions on the respective providers' websites.
+
+## Docker Images
+
+### Prometheus
+- **Image Link:** [prom/prometheus/tags](https://hub.docker.com/r/prom/prometheus/tags)
+- **Current Image:** [prom/prometheus:v2.48.0](https://hub.docker.com/layers/prom/prometheus/v2.48.0-rc.2/images/sha256-7eb9001dc1d2376eaa5277df2254d3b21eb1383dcb7b1a7487dedb7c8961c542?context=explore)
+
+### Alertmanager
+- **Image Link:** [prom/alertmanager/tags](https://hub.docker.com/r/prom/alertmanager/tags)
+- **Current Image:** [prom/alertmanager:v0.26.0](https://hub.docker.com/layers/prom/alertmanager/v0.26.0/images/sha256-b97390a5b2b52cf4dd66098a091ac0575d18fbf35acf2501fb0f180e3488ad15?context=explore)
+
+### Node Exporter
+- **Image Link:** [prom/node-exporter/tags](https://hub.docker.com/r/prom/node-exporter/tags)
+- **Current Image:** [prom/node-exporter:v1.7.0](https://hub.docker.com/layers/prom/node-exporter/v1.7.0/images/sha256-52a6f10ff10238979c365c06dbed8ad5cd1645c41780dc08ff813adacfb2341e?context=explore)
+
+### Cadvisor
+- **Image Link:** [gcr.io/cadvisor/cadvisor](https://console.cloud.google.com/gcr/images/cadvisor/global)
+- **Current Image:** [gcr.io/cadvisor/cadvisor:v0.47.2](https://console.cloud.google.com/gcr/images/cadvisor/global/cadvisor@sha256:78cf73632de30193dc249923fdfdb1d43ee7cfccbf64662991de89ff7c4b1fda/details)
+
+### Grafana
+- **Image Link:** [grafana/grafana](https://github.com/grafana/grafana)
+- **Current Image:** [grafana/grafana:10.2.2](https://fossies.org/linux/misc/grafana-10.2.2.tar.gz/)
+
+### Pushgateway
+- **Image Link:** [prom/pushgateway-linux-armv7/tags](https://hub.docker.com/r/prom/pushgateway-linux-armv7/tags)
+- **Current Image:** [prom/pushgateway:v1.6.2](https://hub.docker.com/layers/prom/pushgateway-linux-armv7/v1.6.2/images/sha256-e7a46078d1ac8245663d2cc20770f1de1cfe959cfbe191da26afdaf0ac1ff587?context=explore)
+
+### Caddy
+- **Image Link:** [caddy/caddy](https://hub.docker.com/_/caddy)
+- **Current Image:** [caddy:2.7.5](https://github.com/caddyserver/caddy-docker/tree/0b5f063a37d52d579b6d4e64b2e2409ad89f7c7a)
+
+**Note:** Make sure to refer to the official documentation of each component for more detailed configuration.
+---
+
 **Caddy v2 does not accept plaintext passwords. It MUST be provided as a hash value. The above password hash corresponds to ADMIN_PASSWORD 'admin'. To know how to generate hash password, refer [Updating Caddy to v2](#Updating-Caddy-to-v2)**
 
 Prerequisites:
