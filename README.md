@@ -1,18 +1,54 @@
-# dockprom
+# dockprom forking by NANDILLON Maxence
 
 A monitoring solution for Docker hosts and containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor),
 [NodeExporter](https://github.com/prometheus/node_exporter) and alerting with [AlertManager](https://github.com/prometheus/alertmanager).
 
 ## Install
 
+Clone repository Install_auto_docker on your Docker host:
+```bash
+git clone https://github.com/NANDILLONMaxence/Install_auto_Docker
+chmod +x Install_auto_Docker/*.sh
+cd Install_auto_Docker
+```
+Check repository for [Install_auto_docker](https://github.com/NANDILLONMaxence/Install_auto_Docker/tree/main)
+
 Clone this repository on your Docker host, cd into dockprom directory and run compose up:
 
 ```bash
-git clone https://github.com/stefanprodan/dockprom
+git clone https://github.com/NANDILLONMaxence/dockprom.git
 cd dockprom
-
-ADMIN_USER='admin' ADMIN_PASSWORD='admin' ADMIN_PASSWORD_HASH='$2a$14$1l.IozJx7xQRVmlkEQ32OeEEfP5mRxTpbDTCTcXRqn19gXD8YK1pO' docker-compose up -d
 ```
+Choose your docker compose file to execute
+
+First setup :
+
+- `docker-compose.yml` it's finish.
+```bash
+docker-compose -f docker-compose.yml up -d
+```
+Second setup :
+- `docker-compose-replicate.yml`
+
+To set up the replication:
+1. **Initializing Docker Swarm:**
+   ```bash
+   docker swarm init
+   ```
+
+2. **Deploy your services stack:**
+   ```bash
+   docker stack deploy -c docker-compose-replicate.yml monitoring
+   ```
+
+3. **List your services:**
+   ```bash
+   docker service ls
+   docker ps -a
+   ```
+   
+
+
 
 # Grafana Prometheus Project Documentation
 
