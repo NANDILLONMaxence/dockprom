@@ -72,7 +72,7 @@ The versions of the images listed in the table are as of December 8, 2023. It is
 - **Image Link:** [caddy/caddy](https://hub.docker.com/_/caddy)
 - **Current Image:** [caddy:2.7.5](https://github.com/caddyserver/caddy-docker/tree/0b5f063a37d52d579b6d4e64b2e2409ad89f7c7a)
 
-**Note:** Make sure to refer to the official documentation of each component for more detailed configuration.
+Note : Make sure to refer to the official documentation of each component for more detailed configuration.
 ---
 
 **Caddy v2 does not accept plaintext passwords. It MUST be provided as a hash value. The above password hash corresponds to ADMIN_PASSWORD 'admin'. To know how to generate hash password, refer [Updating Caddy to v2](#Updating-Caddy-to-v2)**
