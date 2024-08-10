@@ -56,13 +56,13 @@ To set up the replication:
 
 | Name | Image | Description |
 |---|---|---|
-| Prometheus | prom/prometheus:v2.48.0 | Metrics collection and analysis server |
-| Alertmanager | prom/alertmanager:v0.26.0 | Alerting service based on Prometheus |
-| NodeExporter | prom/node-exporter:v1.7.0 | Metrics collector for hosts |
-| CAdvisor | gcr.io/cadvisor/cadvisor:v0.47.2 | Metrics collector for containers |
-| Grafana | grafana/grafana:10.2.2 | Metrics analysis tool |
-| Pushgateway | prom/pushgateway:v1.6.2 | Metrics ingestion service |
-| Caddy | caddy:2.7.5 | Lightweight web server |
+| Prometheus | prom/prometheus:v2.52.0 | Metrics collection and analysis server |
+| Alertmanager | prom/alertmanager:v0.27.0 | Alerting service based on Prometheus |
+| NodeExporter | prom/node-exporter:v1.8.1 | Metrics collector for hosts |
+| CAdvisor | gcr.io/cadvisor/cadvisor:v0.49.1 | Metrics collector for containers |
+| Grafana | grafana/grafana:11.0.0 | Metrics analysis tool |
+| Pushgateway | prom/pushgateway:v1.9.0 | Metrics ingestion service |
+| Caddy | caddy:2.7.6 | Lightweight web server |
 
 **Explanations**
 
@@ -76,37 +76,30 @@ To set up the replication:
 
 **Image Versions**
 
-The versions of the images listed in the table are as of December 8, 2023. It is recommended to check for the latest versions on the respective providers' websites.
+The versions of the images listed in the table are as of 10/08/2024. It is recommended to check for the latest versions on the respective providers' websites.
 
 ## Docker Images
 
 ### Prometheus
 - **Image Link:** [prom/prometheus/tags](https://hub.docker.com/r/prom/prometheus/tags)
-- **Current Image:** [prom/prometheus:v2.48.0](https://hub.docker.com/layers/prom/prometheus/v2.48.0-rc.2/images/sha256-7eb9001dc1d2376eaa5277df2254d3b21eb1383dcb7b1a7487dedb7c8961c542?context=explore)
 
 ### Alertmanager
 - **Image Link:** [prom/alertmanager/tags](https://hub.docker.com/r/prom/alertmanager/tags)
-- **Current Image:** [prom/alertmanager:v0.26.0](https://hub.docker.com/layers/prom/alertmanager/v0.26.0/images/sha256-b97390a5b2b52cf4dd66098a091ac0575d18fbf35acf2501fb0f180e3488ad15?context=explore)
 
 ### Node Exporter
 - **Image Link:** [prom/node-exporter/tags](https://hub.docker.com/r/prom/node-exporter/tags)
-- **Current Image:** [prom/node-exporter:v1.7.0](https://hub.docker.com/layers/prom/node-exporter/v1.7.0/images/sha256-52a6f10ff10238979c365c06dbed8ad5cd1645c41780dc08ff813adacfb2341e?context=explore)
 
 ### Cadvisor
 - **Image Link:** [gcr.io/cadvisor/cadvisor](https://console.cloud.google.com/gcr/images/cadvisor/global)
-- **Current Image:** [gcr.io/cadvisor/cadvisor:v0.47.2](https://console.cloud.google.com/gcr/images/cadvisor/global/cadvisor@sha256:78cf73632de30193dc249923fdfdb1d43ee7cfccbf64662991de89ff7c4b1fda/details)
 
 ### Grafana
 - **Image Link:** [grafana/grafana](https://github.com/grafana/grafana)
-- **Current Image:** [grafana/grafana:10.2.2](https://fossies.org/linux/misc/grafana-10.2.2.tar.gz/)
 
 ### Pushgateway
 - **Image Link:** [prom/pushgateway-linux-armv7/tags](https://hub.docker.com/r/prom/pushgateway-linux-armv7/tags)
-- **Current Image:** [prom/pushgateway:v1.6.2](https://hub.docker.com/layers/prom/pushgateway-linux-armv7/v1.6.2/images/sha256-e7a46078d1ac8245663d2cc20770f1de1cfe959cfbe191da26afdaf0ac1ff587?context=explore)
 
 ### Caddy
 - **Image Link:** [caddy/caddy](https://hub.docker.com/_/caddy)
-- **Current Image:** [caddy:2.7.5](https://github.com/caddyserver/caddy-docker/tree/0b5f063a37d52d579b6d4e64b2e2409ad89f7c7a)
 
 Note : Make sure to refer to the official documentation of each component for more detailed configuration.
 ---
