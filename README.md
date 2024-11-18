@@ -56,13 +56,13 @@ To set up the replication:
 
 | Name | Image | Description |
 |---|---|---|
-| Prometheus | prom/prometheus:v2.52.0 | Metrics collection and analysis server |
+| Prometheus | prom/prometheus:v2.55.0 | Metrics collection and analysis server |
 | Alertmanager | prom/alertmanager:v0.27.0 | Alerting service based on Prometheus |
-| NodeExporter | prom/node-exporter:v1.8.1 | Metrics collector for hosts |
-| CAdvisor | gcr.io/cadvisor/cadvisor:v0.49.1 | Metrics collector for containers |
-| Grafana | grafana/grafana:11.0.0 | Metrics analysis tool |
-| Pushgateway | prom/pushgateway:v1.9.0 | Metrics ingestion service |
-| Caddy | caddy:2.7.6 | Lightweight web server |
+| NodeExporter | prom/node-exporter:v1.8.2 | Metrics collector for hosts |
+| CAdvisor | gcr.io/cadvisor/cadvisor:v0.51.0 | Metrics collector for containers |
+| Grafana | grafana/grafana:11.3.0 | Metrics analysis tool |
+| Pushgateway | prom/pushgateway:v1.10.0 | Metrics ingestion service |
+| Caddy | caddy:2.8.4 | Lightweight web server |
 
 **Explanations**
 
